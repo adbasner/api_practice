@@ -23,8 +23,8 @@ while true
 
   # gets JSON data
   definition_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=apikey")
-  top_example_response = Unirest.get"https://api.wordnik.com/v4/word.json/#{word}/topExample?useCanonical=false&api_key=apikey"
-  all_pronunciations = Unirest.get"https://api.wordnik.com/v4/word.json/#{word}/pronunciations?useCanonical=false&limit=50&api_key=apikey"
+  top_example_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/topExample?useCanonical=false&api_key=apikey")
+  all_pronunciations = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/pronunciations?useCanonical=false&limit=50&api_key=apikey")
 
   #check for nonsensical words
   if definition_response.body[0] == nil
