@@ -22,18 +22,18 @@ class Dictionary
   end
 
   def get_top_example
-    top_example_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/topExample?useCanonical=false&api_key=apikey")
+    top_example_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/topExample?useCanonical=false&api_key=ac6099e63826b8650f05e22c4cc08baa2f21668e3f16176fd")
     top_example_response.body
   end
 
   def get_definitions
-    definition_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=apikey")
+    definition_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=ac6099e63826b8650f05e22c4cc08baa2f21668e3f16176fd")
     definition_response.body
   end
 
 
   def get_pronunciations
-    pronunciation_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/pronunciations?useCanonical=false&limit=50&api_key=apikey")
+    pronunciation_response = Unirest.get("https://api.wordnik.com/v4/word.json/#{word}/pronunciations?useCanonical=false&limit=50&api_key=ac6099e63826b8650f05e22c4cc08baa2f21668e3f16176fd")
     pronunciation_response.body
   end
 
